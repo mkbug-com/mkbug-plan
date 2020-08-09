@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import NotFound from './NotFound';
+import NotFound from '../NotFound';
 
 export default function (props) {
   return <Router>

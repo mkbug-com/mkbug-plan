@@ -5,6 +5,7 @@ import { COMMON } from './const';
 import * as actions from './actions/common';
 
 import Loading from './pages/Loading/';
+import Main from './pages/Main/';
 
 class App extends React.PureComponent {
   componentDidMount() {
@@ -16,7 +17,7 @@ class App extends React.PureComponent {
     return (
       (props.AppStatus === COMMON.APP_STATUS.INITING ||
         props.AppStatus === COMMON.APP_STATUS.LOADING) ?
-      <Loading /> : <div>11</div>
+      <Loading /> : <Main />
     );
   }
 }
