@@ -1,7 +1,25 @@
 .mkbug__loading {
   text-align: center;
   min-height: 100%;
+  position: relative;
+}
+.mkbug__loading .loading__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .mkbug__loading .loading__icon .loading__img {
   width: 44px;
+}
+.mkbug__loading .loading__icon .loading__text {
+  margin-top: 6px;
+}
+.mkbug__loading .loading__icon .loading__text .loading__text_item {
+  font-size: 14px;
+  color: #999;
+}
+.mkbug__loading .loading__icon .loading__text .loading__text_item.is_current {
+  color: #000;
+  font-weight: bold;
 }

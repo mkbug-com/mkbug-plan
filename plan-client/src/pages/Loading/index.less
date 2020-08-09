@@ -1,10 +1,28 @@
 .mkbug__loading {
   text-align: center;
   min-height: 100%;
+  position: relative;
+
   .loading__icon {
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     .loading__img {
       width: 44px;
+    }
+
+    .loading__text {
+      margin-top: 6px;
+      .loading__text_item {
+        font-size: 14px;
+        color: #999;
+        &.is_current {
+          color: #000;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
