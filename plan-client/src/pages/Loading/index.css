@@ -1,0 +1,7 @@
+.mkbug__loading {
+  text-align: center;
+  min-height: 100%;
+}
+.mkbug__loading .loading__icon .loading__img {
+  width: 44px;
+}

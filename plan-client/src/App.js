@@ -1,10 +1,31 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+import { COMMON } from './const';
+
+import Loading from './pages/Loading/';
+
+function App(props) {
   return (
-    <div className="App">
-    </div>
+    (props.AppStatus === COMMON.APP_STATUS.INITING ||
+      props.AppStatus === COMMON.APP_STATUS.LOADING) ?
+    <Loading /> : <div></div>
   );
 }
 
-export default App;
+const mapStateToProps = function (state) {
+  return {
+    AppStatus: state.Common.AppStatus
+  }
+}
+
+const MapDispatchToProps = function (dispatch) {
+  return {
+
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  MapDispatchToProps
+)(App);
